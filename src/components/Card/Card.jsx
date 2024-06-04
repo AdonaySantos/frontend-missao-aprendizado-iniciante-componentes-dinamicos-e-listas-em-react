@@ -1,12 +1,12 @@
 import './Card.css'
 
 export default function Card(props) {
-  console.log(props)
 
   return (
     <div className="card">
-      <h1>{props.nome}</h1>
-      <img src={props.imagem} width="200" />
+      <h2>{props.item.nome}</h2>
+      {props.item.evoluiPara && <p>Evolui para: <b>{props.item.evoluiPara}</b></p>}
+      <img src={props.item.imagem} width="200" />
     </div>
   );
 }
